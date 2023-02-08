@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+
+go install github.com/vektra/mockery/v2@latest
+rm -R ./mocks
+mockery --all --case underscore --dir ./internal
